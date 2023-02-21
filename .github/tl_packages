@@ -12,8 +12,10 @@ tex
 xetex
 # Requirements for the tests
 amsfonts
+doclicense
 dvips
 etex-pkg
+hyperxmp
 #
 # Support for typesetting the docs
 #
