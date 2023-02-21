@@ -13,13 +13,18 @@ tex
 xetex
 # Requirements for the tests
 amsfonts
+bookmark
 ccicons
+colorprofiles
 doclicense
 dvips
 epstopdf-pkg
 etex-pkg
 hyperxmp
 ifmtarg
+l3experimental
+latex-lab
+pdfmanagement-testphase
 totpages
 xifthen
 xkeyval
