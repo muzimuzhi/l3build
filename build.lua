@@ -15,7 +15,7 @@ checkdeps    = { }
 specialformats = specialformats or {}
 specialformats["latex"] = specialformats["latex"] or
   {
-    latexdvips = {binary = "latex", format = ""}
+    latexdvips = {binary = "latex", format = "latex-dev"}
   }
 checkengines = {"pdftex", "xetex", "luatex", "ptex", "uptex"}
 cleanfiles   = {"*.pdf", "*.tex", "*.zip"}

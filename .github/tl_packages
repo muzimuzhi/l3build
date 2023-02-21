@@ -5,6 +5,7 @@ luatex
 # Required to build formats
 #
 latex-bin
+latex-bin-dev
 luahbtex
 platex
 uplatex
