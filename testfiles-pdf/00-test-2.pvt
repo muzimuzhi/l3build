@@ -2,6 +2,7 @@
 \input regression-test.tex\relax
 
 \documentclass{minimal}
+\usepackage{hyperref}
 
 \begin{document}
 
