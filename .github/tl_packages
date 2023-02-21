@@ -12,10 +12,15 @@ tex
 xetex
 # Requirements for the tests
 amsfonts
+ccicons
 doclicense
 dvips
 etex-pkg
 hyperxmp
+ifmtarg
+totpages
+xifthen
+xstring
 #
 # Support for typesetting the docs
 #
