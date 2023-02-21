@@ -15,6 +15,7 @@ amsfonts
 ccicons
 doclicense
 dvips
+epstopdf
 etex-pkg
 hyperxmp
 ifmtarg
