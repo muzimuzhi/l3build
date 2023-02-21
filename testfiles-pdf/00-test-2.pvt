@@ -1,4 +1,10 @@
-\DocumentMetadata{} % needed by dvips (ps2pdf), to normalize pdf metadata
+% needed by dvips (ps2pdf), to normalize pdf metadata
+\DocumentMetadata
+ {
+   pdfstandard=a-2b,
+   pdfstandard=X-4,
+   pdfstandard=ua-1,
+}
 \input regression-test.tex\relax
 
 \documentclass{minimal}
