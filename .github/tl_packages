@@ -20,6 +20,7 @@ hyperxmp
 ifmtarg
 totpages
 xifthen
+xkeyval
 xstring
 #
 # Support for typesetting the docs
