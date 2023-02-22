@@ -1,5 +1,2 @@
--- checkengines = {"pdftex", "xetex", "latexdvips"}
-checkengines = {"latexdvips"}
--- 2 runs are needed by xetex, to get the right <prism:pageCount> value
--- checkruns = 2
+checkengines = {"pdftex", "xetex", "latexdvips"}
 testfiledir  = "testfiles-pdf"
