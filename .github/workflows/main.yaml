@@ -27,7 +27,9 @@ jobs:
       - name: Print content of interest
         if: always()
         run: |
-          grep -C 1 -aHnr 'CreationDate' build/test-config-pdf/*.latexdvips.pdf
+          test="00-test-2"
+          file="build/test-config-pdf/$test.pdf"
+          grep -C 1 -ahnr 'Date\|Invocation' $file
       - name: Archive failed tests
         if: failure()
         uses: actions/upload-artifact@v3
