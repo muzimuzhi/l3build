@@ -3,4 +3,3 @@ checkengines = {"latexdvips"}
 -- 2 runs are needed by xetex, to get the right <prism:pageCount> value
 -- checkruns = 2
 testfiledir  = "testfiles-pdf"
-ps2pdfopt = " -dCompatibilityLevel=1.5 "
