@@ -30,3 +30,4 @@ jobs:
           name: l3build-test-diff
           path: |
             build/test*/*.diff
+            build/test-config-pdf/
