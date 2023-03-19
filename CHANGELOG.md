@@ -7,6 +7,9 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+### Fixed
+- Use LF as EOL for Windows
+
 ## [2023-03-08]
 
 ### Changed

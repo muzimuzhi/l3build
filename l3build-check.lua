@@ -91,11 +91,13 @@ end
 function checkinit_hook() return 0 end
 
 local function rewrite(source,result,processor,...)
+  -- open file in binary mode, to avoid convertion from \n to \r\n in Win
+  -- http://lua-users.org/lists/lua-l/2015-05/msg00349.html
   local file = assert(open(source,"rb"))
   local content = gsub(file:read("*all") .. "\n","\r\n","\n")
   close(file)
   local new_content = processor(content,...)
-  local newfile = open(result,"w")
+  local newfile = open(result,"wb")
   output(newfile)
   write(new_content)
   close(newfile)
