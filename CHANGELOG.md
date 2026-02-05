@@ -8,6 +8,10 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+### Changed
+
+- Align `\SHOWPDFTAGS` markers (may require `.tlg` update)
+
 ### Fixed
 
 - Skip LuaTeX-specific log normalization for `\SHOWPDFTAGS` output (issue \#443)
