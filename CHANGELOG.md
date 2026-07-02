@@ -17,6 +17,7 @@ this project uses date-based 'snapshot' version identifiers.
 - Expand default value of `binaryfiles`
 - Normalize Lua-only attribute, `\XeTeXcharclass`
   allocation lines and user defined `\whatsit` nodes (may require `.tlg` update)
+- Include LaTeX release info in raw `.log` file (see \#466)
 
 ### Fixed
 

@@ -943,6 +943,13 @@
 % an empty table the latter process is skipped: suitable for cases where only
 % Unicode engines are in use.
 %
+% Note that for technical reasons, any information printed during \cs{everyjob}
+% is suppressed by \pkg{l3build}. \LaTeX{} version information is also printed
+% at the end of documents, and is visible in the raw \texttt{.log} files but
+% is automatically omitted from \texttt{.tlg} files. This information may be
+% useful for debugging: to ensure it prints, you need to use |\end{document}|
+% rather than \cs{END}.
+%
 % \subsection{Breaking changes}
 %
 % Very occasionally, it is necessary to make changes to \pkg{l3build} that
@@ -2347,13 +2354,26 @@
 %    \end{macrocode}
 % \end{macro}
 %
+% \begin{macro}{\gOMITint}
 % \begin{macro}{\OMIT, \TIMO}
 %   Surround commands which produce irrelevant lines in the |.log| file by
 %   |\OMIT|\dots|\TIMO|
 %    \begin{macrocode}
-\def\OMIT{\LONGTYPEOUT{OMIT}}
-\def\TIMO{\LONGTYPEOUT{TIMO}}
+\newcount\gOMITint
+\def\OMIT{%
+  \ifnum\gOMITint=0 %
+    \LONGTYPEOUT{OMIT}%
+  \fi
+  \global\advance\gOMITint1 %
+}
+\def\TIMO{%
+  \ifnum\gOMITint=0 \else
+    \LONGTYPEOUT{TIMO}%
+  \fi
+  \global\advance\gOMITint-1 %
+}
 %    \end{macrocode}
+% \end{macro}
 % \end{macro}
 %
 %  \begin{macro}{\SHOWFILE}
@@ -2643,8 +2663,10 @@
 %  Suppress version data in \LaTeX{} runs.
 %    \begin{macrocode}
 \ifdefined\AddToHook
-  \AddToHook{enddocument/info}[kernel/testmode]{}
-  \DeclareHookRule{enddocument/info}{kernel/testmode}{voids}{kernel/release}
+  \AddToHook{enddocument/info}[l3build/before]{\OMIT}
+  \AddToHook{enddocument/info}[l3build/after]{\TIMO}
+  \DeclareHookRule{enddocument/info}{l3build/before}{before}{kernel/release}
+  \DeclareHookRule{enddocument/info}{l3build/after}{after}{kernel/release}O
 \fi
 %    \end{macrocode}
 %
