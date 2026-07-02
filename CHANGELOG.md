@@ -8,6 +8,8 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+## [2026-07-02]
+
 ### Added
 
 - Variable `versionpatterns` (issue \#449)
@@ -1018,7 +1020,8 @@ this project uses date-based 'snapshot' version identifiers.
 - Rationalize short option names: removed `-d`, `-E`, `-r`
 - Target `cmdcheck`: specific to LaTeX kernel work
 
-[Unreleased]: https://github.com/latex3/l3build/compare/2026-03-26...HEAD
+[Unreleased]: https://github.com/latex3/l3build/compare/2026-07-02...HEAD
+[2026-07-02]: https://github.com/latex3/l3build/compare/2026-03-26...2026-07-02
 [2026-03-26]: https://github.com/latex3/l3build/compare/2026-03-13...2026-03-26
 [2026-03-13]: https://github.com/latex3/l3build/compare/2025-12-24...2026-03-13
 [2025-12-24]: https://github.com/latex3/l3build/compare/2025-12-19...2025-12-24
