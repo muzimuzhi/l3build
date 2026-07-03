@@ -8,6 +8,10 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+### Fixed
+
+- Ensure `\filelist` is not omitted in `.log`
+
 ## [2026-07-02]
 
 ### Added
