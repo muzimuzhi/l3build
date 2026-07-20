@@ -8,6 +8,10 @@ this project uses date-based 'snapshot' version identifiers.
 
 ## [Unreleased]
 
+### Changed
+
+- Revise method for printing LaTeX version information in raw `.log`
+
 ### Fixed
 
 - Ensure first-time CTAN upload re-validates as a new package instead of
